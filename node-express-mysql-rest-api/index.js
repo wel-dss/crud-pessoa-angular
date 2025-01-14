@@ -8,8 +8,8 @@ import { criar } from './criar.js';
 const app = express();
 const port = 3000;
 const nomeDeHost = 'localhost';
-const usuario = 'root';
-const senha = 'root';
+const usuario = '';
+const senha = '';
 const nomeDeBD = "e_terapia";
 
 let configInicial = false;
