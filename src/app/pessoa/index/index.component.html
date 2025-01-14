@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Angular 19 CRUD com Node JS, express e MySQL</h1> <!-- Título principal da página -->
+    <a href="#" routerLink="/pessoa/create/" class="btn btn-success">Criar nova pessoa</a>
+    <!-- Tabela que exibe a lista de posts -->
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <!-- Cabeçalhos das colunas -->
+                <th>Id</th>
+                <th>Status</th>
+                <th>CPF</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th width="200px">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Laço para iterar sobre a lista de pessoas e exibir cada uma na tabela -->
+            <tr *ngFor="let pessoa of pessoas">
+                <td>{{ pessoa.id }}</td>
+                <td>{{ pessoa.status ? 'Ativo' : 'Inativo' }}</td>
+                <td>{{ pessoa.cpf }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.email }}</td>
+                <td>{{ pessoa.senha }}</td>
+                <td>
+                    <a href="#" [routerLink]="['/pessoa/', pessoa.id, 'view']" class="btn btn-info">Visualizar</a>
+                    <a href="#" [routerLink]="['/pessoa/', pessoa.id, 'edit']" class="btn btn-primary">Editar</a>
+                    <button type="button" (click)="deletePessoa(pessoa.id)" class="btn btn-danger">Deletar</button>
+                    <button type="button" (click)="realmenteDeletePessoa(pessoa.id)" class="btn btn-danger">Apagar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
