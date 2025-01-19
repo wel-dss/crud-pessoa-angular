@@ -16,7 +16,7 @@ FLUSH PRIVILEGES;
 
 ## Execução
 
-* No arquivo index.js em node-express-mysql-rest-api, edite adequadamente nomeDeHost, usuario e senha de acordo com o seu banco de dados. Se necessário mude também port, nesse caso não esqueça de também mudar a porta em pessoa.service.ts.
+* No arquivo index.js em node-express-mysql-rest-api, edite adequadamente nomeDeHost, usuário e senha de acordo com o seu banco de dados. Se necessário mude também port, nesse caso não esqueça de também mudar a porta em pessoa.service.ts (devem ser a mesma).
 
 * Para iniciar o servidor, na pasta node-express-mysql-rest-api, execute:
 ```shell
